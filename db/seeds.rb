@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+bar = Bar.new({ name: "Chicago Bears Bar", price: 575.25, description: "A perfect bar to bring to a tailgate, this Chicago Bears bar folds up and can be easily transported in your car, or sotred in the garage.", image_url: "https://www.sportslogos.net/logos/view/16923591999/Chicago_Bears/1999/Alternate_Logo" })
+bar.save
+
+bar = Bar.new({ name: "Land Shark Bar", price: 545.25, description: "Get a taste of island time with this LandShark themed portable bar, and enjoy a cheeseburger and beer in paradice atop this lightweight bar top.", image_url: "https://logodix.com/logos/1926007" })
+bar.save
+
+bar = Bar.new({ name: "Buffalo Bills Bar", price: 575.25, description: "A perfect bar to bring to a tailgate, this Buffalo Bills bar folds up and can be easily transported in your car, or sotred in the garage.", image_url: "https://www.sportslogos.net/logos/view/14972061974/Buffalo_Bills/1974/Alternate_Logo" })
+bar.save
