@@ -1,0 +1,15 @@
+### Show all Bars
+GET http://localhost:3000/bars
+
+### Create a new Bar
+POST http://localhost:3000/bars
+Content-Type: application/json
+
+{
+  "name": "Chicago Blackhawks Bar",
+  "price": "605.25",
+  "description": "A perfect bar to bring to a tailgate, this Chicago Blackhawks bar folds up and can be easily transported in your car, or sotred in the garage."
+}
+
+### Delete a created Bar
+DELETE http://localhost:3000/bars/4

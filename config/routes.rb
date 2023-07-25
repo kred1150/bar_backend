@@ -6,4 +6,7 @@ Rails.application.routes.draw do
 
   get "/bars" => "bars#index"
   get "/bars/:id" => "bars#show"
+  post "/bars" => "bars#create"
+  patch "/bars/:id" => "bars#update"
+  delete "/bars/:id" => "bars#destroy"
 end
