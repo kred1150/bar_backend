@@ -1,0 +1,14 @@
+@bar.map do |bar|
+  {
+    id: bar.id,
+    name: bar.name,
+    price: bar.price,
+    images: bar.images,
+    categories: bar.categories, 
+    description: bar.description,
+    friendly_created_at: bar.friendly_created_at,
+    delivered_total: bar.delivered_total,
+    created_at: bar.created_at,
+    updated_at: bar.updated_at
+  }
+end
