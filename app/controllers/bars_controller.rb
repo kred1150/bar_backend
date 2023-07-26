@@ -1,12 +1,12 @@
 class BarsController < ApplicationController
   def index
     @bars = Bar.all
-    render json: @bars.as_json
+    render template: "bars/index"
   end
 
   def show
     @bar = Bar.find_by(id: params["id"])
-    render json: @bar.as_json
+    render template: "bars/show"
   end
 
   def create
@@ -20,7 +20,7 @@ class BarsController < ApplicationController
         url: params["image_url"],
         bar_id: @bar.id,
       )
-      render json: @bar.as_json
+      render template: "bars/show"
     else
       render json: { errors: @bar.errors.full_messages }, status: 422
     end
@@ -33,7 +33,7 @@ class BarsController < ApplicationController
     @bar.description = params["description"] || @bar.description
 
     if @bar.save
-      render json: @bar.as_json
+      render template: "bars/show"
     else
       render json: { errors: @bar.errors.full_messages }, status: 422
     end

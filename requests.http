@@ -1,5 +1,8 @@
 ### Show all Bars
-GET http://localhost:3000/bars
+GET http://localhost:3000/bars.json
+
+### Show a single Bars
+GET http://localhost:3000/bars/3.json
 
 ### Create a new Bar
 POST http://localhost:3000/bars

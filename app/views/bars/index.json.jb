@@ -1,10 +1,9 @@
-@bar.map do |bar|
+@bars.map do |bar|
   {
     id: bar.id,
     name: bar.name,
     price: bar.price,
-    images: bar.images,
-    categories: bar.categories, 
+    image: bar.image_url, 
     description: bar.description,
     friendly_created_at: bar.friendly_created_at,
     delivered_total: bar.delivered_total,
