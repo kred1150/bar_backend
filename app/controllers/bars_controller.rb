@@ -1,4 +1,9 @@
 class BarsController < ApplicationController
+  validates :name, presence: true
+  validates :price, presence: true
+  validates :price, numericality: { greater_than: 0 }
+  validates :description, length: { in: 10..500 }
+
   def index
     @bars = Bar.all
     render template: "bars/index"
