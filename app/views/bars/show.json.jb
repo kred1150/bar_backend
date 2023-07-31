@@ -3,7 +3,6 @@
   name: @bar.name,
   price: @bar.price,
   description: @bar.description,
-  image: @bar.image_url,
   friendly_created_at: @bar.friendly_created_at,
   delivered_total: @bar.delivered_total,
   created_at: @bar.created_at,

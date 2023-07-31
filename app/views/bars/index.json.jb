@@ -3,7 +3,6 @@
     id: bar.id,
     name: bar.name,
     price: bar.price,
-    image: bar.image_url, 
     description: bar.description,
     friendly_created_at: bar.friendly_created_at,
     delivered_total: bar.delivered_total,
