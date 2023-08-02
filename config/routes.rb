@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   post "/bars" => "bars#create"
   patch "/bars/:id" => "bars#update"
   delete "/bars/:id" => "bars#destroy"
+
+  post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
 end
