@@ -15,4 +15,4 @@ Content-Type: application/json
 }
 
 ### Delete a created Bar
-DELETE http://localhost:3000/bars/4
+DELETE http://localhost:3000/bars/5
