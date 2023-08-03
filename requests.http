@@ -16,3 +16,17 @@ Content-Type: application/json
 
 ### Delete a created Bar
 DELETE http://localhost:3000/bars/5
+
+### Create a new User
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "username": "test",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Users Index
+get http://localhost:3000/users.json
