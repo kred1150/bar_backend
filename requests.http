@@ -6,6 +6,7 @@ GET http://localhost:3000/bars/3.json
 
 ### Create a new Bar
 POST http://localhost:3000/bars
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTE0Njg4MDV9.gTh1ZceafC6T2jJa-xeGMWyHYta6hJ-xBobkQmWn4ZA
 Content-Type: application/json
 
 {
@@ -30,3 +31,14 @@ Content-Type: application/json
 
 ### Users Index
 get http://localhost:3000/users.json
+
+### Sessions Create
+POST http://localhost:3000/sessions.json 
+Content-Type: application/json
+
+{
+  "username": "test",
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
