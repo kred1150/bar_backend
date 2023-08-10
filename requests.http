@@ -42,3 +42,9 @@ Content-Type: application/json
   "password": "password",
   "password_confirmation": "password"
 }
+
+### Orders Index
+get http://localhost:3000/orders.json
+
+### Orders Show
+get http://localhost:3000/orders/1.json

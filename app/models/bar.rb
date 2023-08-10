@@ -5,6 +5,7 @@ class Bar < ApplicationRecord
   validates :description, length: { in: 10..500 }
 
   has_many :images
+  has_many :orders
   belongs_to :user
 
   def friendly_created_at
