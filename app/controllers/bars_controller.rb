@@ -28,7 +28,7 @@ class BarsController < ApplicationController
       end
     else
       render json: { errors: "You are not authorized to create a listing!" }, status: 401
-    e
+    end
   end
 
   # def update
