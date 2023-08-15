@@ -22,4 +22,10 @@ class ApplicationController < ActionController::API
       render json: { meesage: "You are not logged in, please log in to access additional features." }, status: :unauthorized
     end
   end
+
+  def authenticate_admin
+    unless current_user && current_user.admin
+      render json: {}, status: :unauthorized
+    end
+  end
 end
