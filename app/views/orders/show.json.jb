@@ -1,0 +1,9 @@
+{
+  id: @order.id,
+  bar: @order.bar,
+  delivery: @order.delivery,
+  subtotal: @order.subtotal,
+  total: @order.total,
+  created_at: @order.created_at,
+  updated_at: @order.updated_at
+}

@@ -1,4 +1,9 @@
 class OrdersController < ApplicationController
+  def index
+    @orders = current_user.orders
+    render template: "orders/index"
+  end
+
   def create
     @order = Order.new(
       user_id: current_user.id,
@@ -8,19 +13,14 @@ class OrdersController < ApplicationController
       total: params[:total],
     )
     if @order.save
-      render json: @order.as_json
+      render template: "orders/show"
     else
       render json: { errors: @order.errors.full_messages }
     end
   end
 
   def show
-    @order = Order.find_by(id: params["id"])
-    render json: @order.as_json
-  end
-
-  def index
-    @order = Order.all
-    render json: @order.as_json
+    @order = current_user.orders.find_by(id: params["id"])
+    render template: "orders/show"
   end
 end

@@ -43,8 +43,22 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### Orders Create
+POST http://localhost:3000/orders.json
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTIxNDY5MzV9.G6s3rBfxtl_RPL01oDylCm6YEr0SNQZWAqH9rUeWys0
+
+{
+  "delivery": true,
+  "bar_id": 1,
+  "subtotal": 500.25,
+  "total": 500.25
+}
+
 ### Orders Index
 get http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTIxNDY5MzV9.G6s3rBfxtl_RPL01oDylCm6YEr0SNQZWAqH9rUeWys0
 
 ### Orders Show
 get http://localhost:3000/orders/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTIxNDY5MzV9.G6s3rBfxtl_RPL01oDylCm6YEr0SNQZWAqH9rUeWys0
