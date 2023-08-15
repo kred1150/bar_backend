@@ -45,12 +45,16 @@ class BarsController < ApplicationController
   # end
 
   def destroy
-    @bar = Bar.find_by(id: params["id"])
-    if @bar.user_id == current_user.id
-      @bar.destroy()
-      render json: { message: "Bar successfully deleted!" }
+    if current_user
+      @bar = Bar.find_by(id: params["id"])
+      if @bar.user_id == current_user.id
+        @bar.destroy()
+        render json: { message: "Bar successfully deleted!" }
+      else
+        render json: { message: "You are not authorized to delete listings!" }, status: 401
+      end
     else
-      render json: { message: "You are not authorized to delete listings!" }, status: 401
+      render json: [], status: :unauthorized
     end
   end
 end
