@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_admin, except: [:create, :destroy]
+
   def create
     user = User.new(
       username: params[:username],
