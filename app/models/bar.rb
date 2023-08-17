@@ -7,6 +7,7 @@ class Bar < ApplicationRecord
   has_many :images
   has_many :orders
   belongs_to :user
+  has_many :bar_categories
 
   def friendly_created_at
     created_at.strftime("%B %e, %Y")
