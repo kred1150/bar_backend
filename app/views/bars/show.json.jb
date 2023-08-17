@@ -4,6 +4,7 @@
   price: @bar.price,
   description: @bar.description,
   images: @bar.images,
+  categories: @bar.categories,
   friendly_created_at: @bar.friendly_created_at,
   delivered_total: @bar.delivered_total,
   created_at: @bar.created_at,
