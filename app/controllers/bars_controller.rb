@@ -16,6 +16,7 @@ class BarsController < ApplicationController
       name: params["name"],
       price: params["price"],
       description: params["description"],
+      # category: params["category_id"]
       user_id: current_user.id,
     )
     if @bar.save
